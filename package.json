@@ -1,0 +1,19 @@
+{
+  "name": "lumijiez",
+  "version": "1.0.0",
+  "description": "Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of technologies and passionate about solving complex problems with innovative solutions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.3",
+    "canvas": "^2.11.2",
+    "date-fns": "^3.6.0",
+    "moment-timezone": "^0.5.45",
+    "sharp": "^0.33.4"
+  }
+}
