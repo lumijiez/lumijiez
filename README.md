@@ -2,6 +2,10 @@
 
 I'm a student at the Software Engineering faculty of the Technical University of Moldova.
 
+I am interested in high- and low-level systems, computer graphics, and simulations! 
+
+
+
 
 <h3 align="center">I have experience with the following technologies:</h3>
 <p align="middle">
@@ -25,4 +29,6 @@ I'm a student at the Software Engineering faculty of the Technical University of
 <a href="https://www.buymeacoffee.com/lemoentjiez"><img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=lemoentjiez&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"></a>
 </p>
 
-Excited to see what's next!
+<p align="center"> 
+  Excited to see what's next!
+ </p>
