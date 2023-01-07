@@ -24,4 +24,7 @@ I'm a student at the Software Engineering faculty of the Technical University of
 <p align="center">
 <a href="https://www.buymeacoffee.com/lemoentjiez"><img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=lemoentjiez&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"></a>
 </p>
+<p align="center">
+<a href="https://leetcode.com/lemoentjiez/"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06"></a>
+</p>
 Excited to see what's next!
