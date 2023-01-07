@@ -17,8 +17,8 @@ I'm a student at the Software Engineering faculty of the Technical University of
   <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
   <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
 </p>
-<p align="middle">
-  <h4>Check me out on:</h4>
+<p align="center">
+  <h4 align="center">Check me out on:</h4>
 <a href="https://leetcode.com/lemoentjiez/"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06"></a>
 </p>
 <p align="center">
