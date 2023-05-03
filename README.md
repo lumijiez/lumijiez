@@ -2,7 +2,7 @@
 
 I'm a student at the Software Engineering faculty of the Technical University of Moldova.
 
-I am interested in high- and low-level systems, computer graphics, and simulations! 
+I am interested in high- and low-level systems, simulations, and computer graphics! 
 
 
 
