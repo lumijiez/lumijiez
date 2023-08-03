@@ -1,6 +1,6 @@
 # Hey, I'm Daniel.
 
-I'm a student at the Software Engineering faculty of the Technical University of Moldova.
+I'm a student of Software Engineering.
 
 I am interested in high- and low-level systems, simulations, and computer graphics! 
 
