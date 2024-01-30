@@ -33,7 +33,7 @@ I am interested in high- and low-level systems, simulations, and computer graphi
   Excited to see what's next!
  </p>
 
-<p align="center"> 
+
    ![Visitor Count](https://profile-counter.glitch.me/{lumijiez}/count.svg)
-</p>
+
 
