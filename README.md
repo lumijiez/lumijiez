@@ -24,8 +24,5 @@ I am interested in high- and low-level systems, simulations, and computer graphi
 
 ![Leetcode Stats](https://leetcard.jacoblin.cool/lumijiez)
 You are the ![Visitor Count](https://profile-counter.glitch.me/{lumijiez}/count.svg) th visitor!
-<p align="middle">
-  You are the ![Visitor Count](https://profile-counter.glitch.me/{lumijiez}/count.svg) th visitor!
-</p>
 
 
