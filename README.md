@@ -27,6 +27,6 @@ I'm a passionate Software Engineering student fascinated by the realms of high- 
 
 ## 🚀 Let's Connect!
 
-Feel free to connect with me through [LinkedIn](YOUR_LINKEDIN_PROFILE_URL) or [Twitter](YOUR_TWITTER_PROFILE_URL)!
+Feel free to connect with me through [LinkedIn](https://www.linkedin.com/in/lumijiez/)!
 
 👀 Thank you for dropping by! You are the ![Visitor Count](https://profile-counter.glitch.me/{lumijiez}/count.svg)th visitor!
