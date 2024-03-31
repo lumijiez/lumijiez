@@ -22,7 +22,7 @@ I am interested in high- and low-level systems, simulations, and computer graphi
   <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
 </p>
 
-<p align="center">![Leetcode Stats](https://leetcard.jacoblin.cool/lumijiez)</p>
+<h1 align="center">![Leetcode Stats](https://leetcard.jacoblin.cool/lumijiez)</h1>
 
 You are the ![Visitor Count](https://profile-counter.glitch.me/{lumijiez}/count.svg) th visitor!
 
