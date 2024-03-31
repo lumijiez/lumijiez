@@ -27,7 +27,7 @@ I am interested in high- and low-level systems, simulations, and computer graphi
 </p>
 
 <p align="center">
-  <p align="middle">You are the
+  <p align="middle">
      <img src="https://profile-counter.glitch.me/{lumijiez}/count.svg" alt="LeetCode Stats"></p>
 </p>
 
