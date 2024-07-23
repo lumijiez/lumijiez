@@ -23,8 +23,4 @@ I'm a passionate Software Engineering student fascinated by the realms of high- 
 
 [![My Awesome Stats](https://awesome-github-stats.azurewebsites.net/user-stats/lumijiez?cardType=github&theme=github-dark&preferLogin=false)](https://git.io/awesome-stats-card)
 
-## 🚀 Let's Connect!
-
-Feel free to connect with me through [LinkedIn](https://www.linkedin.com/in/lumijiez/)!
-
 👀 Thank you for dropping by! You are the ![Visitor Count](https://profile-counter.glitch.me/{lumijiez}/count.svg)th visitor!
