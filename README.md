@@ -7,8 +7,6 @@ I'm a passionate Software Engineering student fascinated by the realms of high- 
 - 🎮 Simulations
 - 🖼️ Computer graphics
 
-![](https://img.shields.io/badge/dynamic/json?logo=github&label=GitHub%20Stars&style=for-the-badge&query=%24.stars&url=https://api.github-star-counter.workers.dev/user/lumijiez)
-
 ## 🔧 Technologies I work with:
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -23,9 +21,7 @@ I'm a passionate Software Engineering student fascinated by the realms of high- 
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
-## 📈 Stats:
-
-![LeetCode Stats](https://leetcard.jacoblin.cool/lumijiez)
+[![My Awesome Stats](https://awesome-github-stats.azurewebsites.net/user-stats/lumijiez?cardType=github&theme=github-dark&preferLogin=false)](https://git.io/awesome-stats-card)
 
 ## 🚀 Let's Connect!
 
