@@ -1,8 +1,8 @@
-name: Update Time Badge
+name: Update Weather Badge
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # Every 10 minutes
+    - cron: '*/10 * * * *'  #10 minutes
   push:
     branches:
       - main
@@ -18,9 +18,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '18'  
 
-      - name: Run time update script
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch weather data
         run: node scripts/update.js
 
       - name: Commit and push README update
@@ -28,5 +31,5 @@ jobs:
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
           git add README.md
-          git commit -m 'Update time badge in README'
+          git diff --cached --quiet || git commit -m 'Update weather badge in README'
           git push
