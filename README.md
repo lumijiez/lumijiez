@@ -27,7 +27,7 @@ I'm a developer with a passion for creating and innovating across various domain
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-## 🌟 My Projects
+## 🌟 My Hobbies
 
 - **Minecraft Modding**: Developing mods to enhance gameplay and add new features.
 - **Unity Development**: Creating immersive experiences and interactive environments.
