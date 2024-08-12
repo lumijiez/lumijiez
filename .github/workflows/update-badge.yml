@@ -21,12 +21,12 @@ jobs:
         run: npm install axios
 
       - name: Run weather and time update script
-        run: node path/to/your/weather_time_update.js
+        run: node scripts/update.js
 
       - name: Commit and push badge update
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git add path/to/weather_time_badge.md
+          git add README.md
           git commit -m 'Update weather and time badge'
           git push
