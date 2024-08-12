@@ -4,7 +4,7 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
 
 ## 🕒 Current Time
 
-![Time](path/to/time_badge.md)
+![Time](time_badge.md)
 
 
 ## 🚀 Expertise & Interests
