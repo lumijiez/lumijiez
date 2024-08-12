@@ -5,7 +5,6 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
 ## 🕒 Current Time
 
 ![Time](https://img.shields.io/badge/Time-23%3A19-blue)
-![Time](time_badge.md)
 
 
 ## 🚀 Expertise & Interests
