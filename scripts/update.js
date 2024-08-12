@@ -1,18 +1,20 @@
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
+const moment = require('moment-timezone');
 
 async function fetchWeather() {
     const url = 'https://api.open-meteo.com/v1/forecast';
     const params = {
         latitude: 47.0105,
-        longitude: 28.8638,
-        hourly: 'temperature_2m'
+        longitude: 28.8638, 
+        hourly: 'temperature_2m',
+        current_weather: true 
     };
 
     try {
         const response = await axios.get(url, { params });
-        const currentTemperature = response.data.hourly.temperature_2m[0];  
+        const currentTemperature = response.data.current_weather.temperature;
         return currentTemperature;
     } catch (error) {
         console.error('Error fetching weather data:', error);
@@ -20,15 +22,15 @@ async function fetchWeather() {
     }
 }
 
-
 async function updateReadme() {
-    const time = new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+    const time = moment().tz('Europe/Chisinau').format('HH:mm');
     const temperature = await fetchWeather();
     const badgeContent = `![Time](https://img.shields.io/badge/Time-${encodeURIComponent(time)}-blue) ![Temperature](https://img.shields.io/badge/Temperature-${temperature}°C-red)`;
     const readmePath = path.join(__dirname, '../README.md');
 
-    const readmeContent = fs.readFileSync(readmePath, 'utf8');
-    const updatedReadmeContent = readmeContent.replace(/!\[Time\]\(.*?\)/, badgeContent);
+    let readmeContent = fs.readFileSync(readmePath, 'utf8');
+    const timeBadgePattern = /!\[Time\]\(.*?\)/;
+    const updatedReadmeContent = readmeContent.replace(timeBadgePattern, badgeContent);
 
     fs.writeFileSync(readmePath, updatedReadmeContent);
 }
