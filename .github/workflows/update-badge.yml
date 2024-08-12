@@ -2,7 +2,7 @@ name: Update Weather Badge
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # Run every 10 minutes
+    - cron: '*/10 * * * *'  #10min
   push:
     branches:
       - main
@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 1 
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -26,10 +28,15 @@ jobs:
       - name: Fetch weather data and update image
         run: node scripts/update.js
 
+      - name: Verify image update
+        run: |
+          git status
+          ls -la scripts/display/toshow.png
+
       - name: Commit and push image update
         run: |
           git config --global user.name 'lumijiez'
           git config --global user.email 'danthevip@gmail.com'
-          git add .
-          git commit -m "Updated README data!"
+          git add --force scripts/display/toshow.png
+          git diff --cached --quiet || git commit -m "Updated weather image in toshow.png"
           git push origin main --force
