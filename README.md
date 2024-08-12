@@ -2,7 +2,7 @@
 
 Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of technologies and passionate about solving complex problems with innovative solutions.
 
-## 🕒 Current Time
+## 🕒 My Current Time and Weather
 
 ![Time](https://img.shields.io/badge/Time-00%3A11-blue) ![Temperature](https://img.shields.io/badge/Temperature-23.8°C-red)<br>Last updated at 2024-08-13 00:11 GMT+3
 
