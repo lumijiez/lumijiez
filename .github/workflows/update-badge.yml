@@ -37,7 +37,7 @@ jobs:
         run: |
           git config --global user.name 'lumijiez'
           git config --global user.email 'danthevip@gmail.com'
-          git add --force scripts/display/toshow.png
+          git add --force blob/main/scripts/display/toshow.png
           git status  # Check the status to see if the image is staged
           git diff --cached --quiet || git commit -m "Updated weather image in toshow.png"
           git push origin main --force
