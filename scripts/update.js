@@ -2,7 +2,8 @@ const { createCanvas, loadImage, registerFont } = require('canvas');
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
-const moment = require('moment-timezone');
+const { format, formatDistance, subMinutes, isToday } = require('date-fns');
+const { enGB } = require('date-fns/locale');
 
 registerFont(path.join(__dirname, 'base', 'fonts', 'Nivea-Bold.otf'), { family: 'CustomFont' });
 
@@ -49,10 +50,11 @@ async function fetchWeather() {
 
 async function renderImage() {
     const now = new Date();
-    const time = moment().format('HH:mm');
-    const amPmTime = moment().format('hh:mmA');
-    const dayOfWeek = moment().format('dddd');
-    const lastUpdated = moment().tz('Europe/Chisinau').format('YYYY-MM-DD HH:mm');
+    const time = format(now, 'HH:mm');
+    const amPmTime = format(now, 'hh:mm a');
+    const dayOfWeek = format(now, 'eeee', { locale: enGB });
+    const lastUpdated = format(now, 'yyyy-MM-dd HH:mm');
+
     const { temperature, windSpeed, precipitation } = await fetchWeather();
 
     let baseImagePath;
