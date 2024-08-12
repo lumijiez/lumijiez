@@ -30,14 +30,18 @@ jobs:
 
       - name: Verify image update
         run: |
-          git status
+          sha256sum scripts/display/toshow.png > old_image_hash.txt || true
           ls -la scripts/display/toshow.png
+
+      - name: Verify image update after script
+        run: |
+          sha256sum scripts/display/toshow.png > new_image_hash.txt
+          diff old_image_hash.txt new_image_hash.txt || echo "Image has not been updated."
 
       - name: Commit and push image update
         run: |
           git config --global user.name 'lumijiez'
           git config --global user.email 'danthevip@gmail.com'
           git add --force scripts/display/toshow.png
-          git status  # Check the status to see if the image is staged
-          git diff --cached --quiet || git commit -m "Updated weather image in toshow.png"
+          git commit -m "Updated weather image in toshow.png" || echo "No changes to commit"
           git push origin main --force
