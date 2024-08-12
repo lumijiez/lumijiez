@@ -2,7 +2,7 @@ name: Update Weather Badge
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  #10 minutes
+    - cron: '*/10 * * * *'  # Run every 10 minutes
   push:
     branches:
       - main
@@ -32,4 +32,4 @@ jobs:
           git config --global user.email 'github-actions@github.com'
           git add scripts/display/toshow.png
           git diff --cached --quiet || git commit -m 'Update weather image in toshow.png'
-          git push
+          git push --force
