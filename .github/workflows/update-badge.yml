@@ -1,1 +1,32 @@
+name: Update Weather and Time Badge
 
+on:
+  schedule:
+    - cron: '*/10 * * * *'  #10 minutes
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install axios
+
+      - name: Run weather and time update script
+        run: node path/to/your/weather_time_update.js
+
+      - name: Commit and push badge update
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add path/to/weather_time_badge.md
+          git commit -m 'Update weather and time badge'
+          git push
