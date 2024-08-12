@@ -30,6 +30,6 @@ jobs:
         run: |
           git config --global user.name 'lumijiez'
           git config --global user.email 'danthevip@gmail.com'
-          git add scripts/display/toshow.png
-          git diff --cached --quiet || git commit -m 'Update weather image in toshow.png'
-          git push --force
+          git add .
+          git commit -m "Updated README data!"
+          git push origin main --force
