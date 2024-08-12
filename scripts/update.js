@@ -9,7 +9,17 @@ const time = gmtPlus3Time.toLocaleTimeString('en-GB', { hour: '2-digit', minute:
 
 const badgeContent = `![Time](https://img.shields.io/badge/Time-${encodeURIComponent(time)}-blue)`;
 
-const badgePath = path.join(__dirname, '../time_badge.md');
-fs.writeFileSync(badgePath, badgeContent);
+const readmePath = path.join(__dirname, '../README.md');
+let readmeContent = fs.readFileSync(readmePath, 'utf8');
 
-console.log('Badge updated with time:', time);
+const timeBadgeRegex = /!\[Time\]\(https:\/\/img.shields.io\/badge\/Time-[^\)]+\)/;
+if (timeBadgeRegex.test(readmeContent)) {
+  readmeContent = readmeContent.replace(timeBadgeRegex, badgeContent);
+} else {
+  const badgeInsertionPoint = '## 🕒 Current Time\n\n';
+  readmeContent = readmeContent.replace(badgeInsertionPoint, `${badgeInsertionPoint}${badgeContent}\n`);
+}
+
+fs.writeFileSync(readmePath, readmeContent);
+
+console.log('README.md updated with time badge:', time);
