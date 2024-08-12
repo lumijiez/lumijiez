@@ -2,7 +2,7 @@ name: Update Weather Badge
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  #10min
+    - cron: '*/10 * * * *'  # Run every 10 minutes
   push:
     branches:
       - main
@@ -38,5 +38,6 @@ jobs:
           git config --global user.name 'lumijiez'
           git config --global user.email 'danthevip@gmail.com'
           git add --force scripts/display/toshow.png
+          git status  # Check the status to see if the image is staged
           git diff --cached --quiet || git commit -m "Updated weather image in toshow.png"
           git push origin main --force
