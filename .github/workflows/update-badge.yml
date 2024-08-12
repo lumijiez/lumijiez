@@ -1,8 +1,11 @@
-name: Update Weather and Time Badge
+name: Update Time Badge
 
 on:
   schedule:
     - cron: '*/10 * * * *'  #10 minutes
+  push:
+    branches:
+      - main 
 
 jobs:
   update-badge:
@@ -18,15 +21,15 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install axios
+        run: npm install
 
-      - name: Run weather and time update script
+      - name: Run time update script
         run: node scripts/update.js
 
       - name: Commit and push badge update
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git add README.md
-          git commit -m 'Update weather and time badge'
+          git add time_badge.md
+          git commit -m 'Update time badge'
           git push
