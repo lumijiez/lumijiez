@@ -4,7 +4,7 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
 
 ## 🕒 Current Time
 
-![Time](https://img.shields.io/badge/Time-23%3A50-blue) ![Temperature](https://img.shields.io/badge/Temperature-23.9°C-red) ![Temperature](https://img.shields.io/badge/Temperature-23.9°C-red)
+![Time](https://img.shields.io/badge/Time-23%3A53-blue) ![Temperature](https://img.shields.io/badge/Temperature-23.9°C-red) ![Temperature](https://img.shields.io/badge/Temperature-23.9°C-red) ![Temperature](https://img.shields.io/badge/Temperature-23.9°C-red)
 
 
 ## 🚀 Expertise & Interests
