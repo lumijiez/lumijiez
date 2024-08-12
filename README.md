@@ -53,11 +53,4 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
 
 ![Visitor Count](https://profile-counter.glitch.me/{lumijiez}/count.svg)
 
-## 🚀 GitHub Actions
-
-<!-- Add GitHub Actions badges here once set up -->
-<!-- Example:
-[![Build Status](https://img.shields.io/github/workflow/status/{username}/{repo}/Build)](https://github.com/{username}/{repo}/actions)
--->
-
 Thank you for exploring my profile! Let’s connect or collaborate on exciting projects. 🚀
