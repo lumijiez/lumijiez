@@ -18,18 +18,18 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Fetch weather data
+      - name: Fetch weather data and update image
         run: node scripts/update.js
 
-      - name: Commit and push README update
+      - name: Commit and push image update
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git add README.md
-          git diff --cached --quiet || git commit -m 'Update weather badge in README'
+          git add scripts/display/toshow.png
+          git diff --cached --quiet || git commit -m 'Update weather image in toshow.png'
           git push
