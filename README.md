@@ -2,6 +2,11 @@
 
 Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of technologies and passionate about solving complex problems with innovative solutions.
 
+## 🕒 Current Time
+
+![Time](path/to/time_badge.md)
+
+
 ## 🚀 Expertise & Interests
 
 - **Game Development**: Dive into Minecraft modding and Unity.
