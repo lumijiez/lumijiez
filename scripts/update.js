@@ -6,10 +6,9 @@ const moment = require('moment-timezone');
 async function fetchWeather() {
     const url = 'https://api.open-meteo.com/v1/forecast';
     const params = {
-        latitude: 47.0105,
+        latitude: 47.0105, 
         longitude: 28.8638, 
-        hourly: 'temperature_2m',
-        current_weather: true 
+        current_weather: true
     };
 
     try {
@@ -25,14 +24,27 @@ async function fetchWeather() {
 async function updateReadme() {
     const time = moment().tz('Europe/Chisinau').format('HH:mm');
     const temperature = await fetchWeather();
+    const lastUpdated = moment().tz('Europe/Chisinau').format('YYYY-MM-DD HH:mm');
+    
     const badgeContent = `![Time](https://img.shields.io/badge/Time-${encodeURIComponent(time)}-blue) ![Temperature](https://img.shields.io/badge/Temperature-${temperature}°C-red)`;
+
     const readmePath = path.join(__dirname, '../README.md');
-
     let readmeContent = fs.readFileSync(readmePath, 'utf8');
-    const timeBadgePattern = /!\[Time\]\(.*?\)/;
-    const updatedReadmeContent = readmeContent.replace(timeBadgePattern, badgeContent);
 
-    fs.writeFileSync(readmePath, updatedReadmeContent);
+    const timeBadgePattern = /!\[Time\]\(https:\/\/img.shields.io\/badge\/Time-.*?-blue\)/;
+    const tempBadgePattern = /!\[Temperature\]\(https:\/\/img.shields.io\/badge\/Temperature-.*?-red\)/;
+    const lastUpdatedPattern = /Last updated at .* GMT\+3/;
+
+    readmeContent = readmeContent.replace(timeBadgePattern, `![Time](https://img.shields.io/badge/Time-${encodeURIComponent(time)}-blue)`);
+    readmeContent = readmeContent.replace(tempBadgePattern, `![Temperature](https://img.shields.io/badge/Temperature-${temperature}°C-red)`);
+
+    if (lastUpdatedPattern.test(readmeContent)) {
+        readmeContent = readmeContent.replace(lastUpdatedPattern, `Last updated at ${lastUpdated} GMT+3`);
+    } else {
+        readmeContent += `\nLast updated at ${lastUpdated} GMT+3`;
+    }
+
+    fs.writeFileSync(readmePath, readmeContent);
 }
 
 updateReadme();
