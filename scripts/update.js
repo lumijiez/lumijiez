@@ -2,8 +2,6 @@ const { createCanvas, loadImage, registerFont } = require('canvas');
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
-const { format } = require('date-fns');
-const { enGB } = require('date-fns/locale');
 
 registerFont(path.join(__dirname, 'base', 'fonts', 'Nivea-Bold.otf'), { family: 'CustomFont' });
 
@@ -48,13 +46,25 @@ async function fetchWeather() {
     }
 }
 
+async function fetchCurrentTime() {
+    const url = 'http://worldtimeapi.org/api/timezone/Europe/Chisinau';
+
+    try {
+        const response = await axios.get(url);
+        const { datetime } = response.data;
+        return new Date(datetime);
+    } catch (error) {
+        console.error('Error fetching current time:', error);
+        return new Date(); // Fallback to current local time
+    }
+}
+
 async function renderImage() {
-    const now = new Date();
-    const timestamp = now.getTime();
-    const time = format(now, 'HH:mm');
-    const amPmTime = format(now, 'hh:mm a');
-    const dayOfWeek = format(now, 'eeee', { locale: enGB });
-    const lastUpdated = format(now, 'yyyy-MM-dd HH:mm');
+    const now = await fetchCurrentTime();
+    const time = now.toISOString().substr(11, 5); // HH:mm
+    const amPmTime = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+    const dayOfWeek = now.toLocaleDateString('en-US', { weekday: 'long' });
+    const lastUpdated = now.toISOString().substr(0, 19).replace('T', ' ');
 
     const { temperature, windSpeed, precipitation } = await fetchWeather();
 
@@ -132,8 +142,7 @@ async function renderImage() {
     ctx.fillText('Made by @lumijiez', canvas.width - 470, canvas.height - 20);
     ctx.strokeText(`Made by @lumijiez`, canvas.width - 470, canvas.height - 20);
 
-    // Save the new image with a timestamp
-    const outputPath = path.join(__dirname, 'display', `toshow_${timestamp}.png`);
+    const outputPath = path.join(__dirname, 'display', 'toshow.png');
     const out = fs.createWriteStream(outputPath);
     const stream = canvas.createPNGStream();
     stream.pipe(out);
