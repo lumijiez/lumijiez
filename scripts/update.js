@@ -143,10 +143,10 @@ async function renderImage() {
     ctx.strokeText(`Last updated: ${lastUpdated} GMT+3`, 20, canvas.height - 20);
 
     const flagSize = 110;
-    ctx.drawImage(moldovaFlag, canvas.width - flagSize - 120, canvas.height - flagSize - 70, flagSize, flagSize);
+    ctx.drawImage(moldovaFlag, canvas.width - flagSize - 110, canvas.height - flagSize - 70, flagSize, flagSize);
     ctx.font = '85px CustomFont';
-    ctx.fillText('Chisinau', canvas.width - flagSize - 520, canvas.height - 100);
-    ctx.strokeText(`Chisinau`, canvas.width - flagSize - 520, canvas.height - 100);
+    ctx.fillText('Chisinau', canvas.width - flagSize - 510, canvas.height - 100);
+    ctx.strokeText(`Chisinau`, canvas.width - flagSize - 510, canvas.height - 100);
 
     ctx.font = '60px CustomFont';
     ctx.fillText('Made by @lumijiez', canvas.width - 650, canvas.height - 20);
