@@ -2,7 +2,7 @@ const { createCanvas, loadImage, registerFont } = require('canvas');
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
-const { format, formatDistance, subMinutes, isToday } = require('date-fns');
+const { format } = require('date-fns');
 const { enGB } = require('date-fns/locale');
 
 registerFont(path.join(__dirname, 'base', 'fonts', 'Nivea-Bold.otf'), { family: 'CustomFont' });
@@ -50,6 +50,7 @@ async function fetchWeather() {
 
 async function renderImage() {
     const now = new Date();
+    const timestamp = now.getTime();
     const time = format(now, 'HH:mm');
     const amPmTime = format(now, 'hh:mm a');
     const dayOfWeek = format(now, 'eeee', { locale: enGB });
@@ -131,7 +132,8 @@ async function renderImage() {
     ctx.fillText('Made by @lumijiez', canvas.width - 470, canvas.height - 20);
     ctx.strokeText(`Made by @lumijiez`, canvas.width - 470, canvas.height - 20);
 
-    const outputPath = path.join(__dirname, 'display', 'toshow.png');
+    // Save the new image with a timestamp
+    const outputPath = path.join(__dirname, 'display', `toshow_${timestamp}.png`);
     const out = fs.createWriteStream(outputPath);
     const stream = canvas.createPNGStream();
     stream.pipe(out);
