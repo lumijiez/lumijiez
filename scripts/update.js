@@ -67,6 +67,8 @@ async function renderImage() {
     
     const now = await fetchCurrentTime();
 
+    now.setHours(now.getHours() + 3);
+
     const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
     const amPmTime = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
     const dayOfWeek = now.toLocaleDateString('en-US', { weekday: 'long' });
