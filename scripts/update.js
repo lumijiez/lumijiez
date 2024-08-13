@@ -69,7 +69,14 @@ async function renderImage() {
 
     now.setHours(now.getHours() + 3);
 
-    const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
+    let hours = now.getHours();
+
+    if (hours === 24) hours = '00';
+        else hours = hours.toString().padStart(2, '0');
+    
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const time = `${hours}:${minutes}`;
+
     const amPmTime = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
     const dayOfWeek = now.toLocaleDateString('en-US', { weekday: 'long' });
     const lastUpdated = now.toLocaleString();
@@ -131,19 +138,19 @@ async function renderImage() {
     ctx.strokeText(windSpeed, horizontalStart + 120, verticalStart + 130 / 2);
     verticalStart += 120;
 
-    ctx.font = '30px CustomFont';
+    ctx.font = '50px CustomFont';
     ctx.fillText(`Last updated: ${lastUpdated} GMT+3`, 20, canvas.height - 20);
     ctx.strokeText(`Last updated: ${lastUpdated} GMT+3`, 20, canvas.height - 20);
 
     const flagSize = 110;
-    ctx.drawImage(moldovaFlag, canvas.width - flagSize - 50, canvas.height - flagSize - 70, flagSize, flagSize);
-    ctx.font = '70px CustomFont';
-    ctx.fillText('Chisinau', canvas.width - flagSize - 400, canvas.height - 100);
-    ctx.strokeText(`Chisinau`, canvas.width - flagSize - 400, canvas.height - 100);
+    ctx.drawImage(moldovaFlag, canvas.width - flagSize - 120, canvas.height - flagSize - 70, flagSize, flagSize);
+    ctx.font = '85px CustomFont';
+    ctx.fillText('Chisinau', canvas.width - flagSize - 520, canvas.height - 100);
+    ctx.strokeText(`Chisinau`, canvas.width - flagSize - 520, canvas.height - 100);
 
-    ctx.font = '40px CustomFont';
-    ctx.fillText('Made by @lumijiez', canvas.width - 470, canvas.height - 20);
-    ctx.strokeText(`Made by @lumijiez`, canvas.width - 470, canvas.height - 20);
+    ctx.font = '60px CustomFont';
+    ctx.fillText('Made by @lumijiez', canvas.width - 650, canvas.height - 20);
+    ctx.strokeText(`Made by @lumijiez`, canvas.width - 650, canvas.height - 20);
 
     console.log('Cleaning display folder...');
     cleanDisplayFolder();
