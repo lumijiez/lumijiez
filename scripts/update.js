@@ -24,24 +24,23 @@ async function fetchWeather() {
     const params = {
         latitude: 47.0105,
         longitude: 28.8638,
-        current_weather: true,
-        hourly: 'temperature_2m,precipitation,wind_speed_10m'
+        current_weather: true 
     };
 
+    console.log('Fetching weather data...');
     try {
         const response = await axios.get(url, { params });
-        const { temperature_2m, wind_speed_10m, precipitation } = response.data.hourly;
+        const { temperature, windspeed } = response.data.current_weather;
+        console.log('Weather data retrieved successfully.');
         return {
-            temperature: temperature_2m[0] + '°C',
-            windSpeed: wind_speed_10m[0] + ' km/h',
-            precipitation: precipitation[0] + ' mm'
+            temperature: temperature + '°C',
+            windSpeed: windspeed + ' km/h',
         };
     } catch (error) {
-        console.error('Error fetching weather data:', error);
+        console.error('Error fetching weather data:', error.message);
         return {
             temperature: 'unknown',
             windSpeed: 'unknown',
-            precipitation: 'unknown'
         };
     }
 }
@@ -49,24 +48,29 @@ async function fetchWeather() {
 async function fetchCurrentTime() {
     const url = 'http://worldtimeapi.org/api/timezone/Europe/Chisinau';
 
+    console.log('Fetching current time...');
     try {
         const response = await axios.get(url);
         const { datetime } = response.data;
+        console.log('Current time retrieved successfully.');
         return new Date(datetime);
     } catch (error) {
-        console.error('Error fetching current time:', error);
-        return new Date(); // Fallback to current local time
+        console.error('Error fetching current time:', error.message);
+        return new Date(); 
     }
 }
 
 async function renderImage() {
+    console.log('Starting image rendering process...');
+    
     const now = await fetchCurrentTime();
-    const time = now.toISOString().substr(11, 5); // HH:mm
+
+    const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
     const amPmTime = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
     const dayOfWeek = now.toLocaleDateString('en-US', { weekday: 'long' });
-    const lastUpdated = now.toISOString().substr(0, 19).replace('T', ' ');
+    const lastUpdated = now.toLocaleString();
 
-    const { temperature, windSpeed, precipitation } = await fetchWeather();
+    const { temperature, windSpeed } = await fetchWeather();
 
     let baseImagePath;
 
@@ -88,7 +92,6 @@ async function renderImage() {
 
     const tempIcon = await loadImage(icons.temperature);
     const windIcon = await loadImage(icons.windSpeed);
-    const precipIcon = await loadImage(icons.precipitation);
     const moldovaFlag = await loadImage(icons.moldovaFlag);
 
     ctx.fillStyle = 'white';
@@ -112,7 +115,7 @@ async function renderImage() {
 
     ctx.font = '80px CustomFont';
     let verticalStart = 50;
-    let horizontalStart = 1550;
+    let horizontalStart = 1450;
 
     ctx.drawImage(tempIcon, horizontalStart, verticalStart, 80, 100);
     ctx.fillText(temperature, horizontalStart + 120, verticalStart + 160 / 2);
@@ -123,10 +126,6 @@ async function renderImage() {
     ctx.fillText(windSpeed, horizontalStart + 120, verticalStart + 130 / 2);
     ctx.strokeText(windSpeed, horizontalStart + 120, verticalStart + 130 / 2);
     verticalStart += 120;
-
-    ctx.drawImage(precipIcon, horizontalStart, verticalStart, 80, 80);
-    ctx.fillText(precipitation, horizontalStart + 120, verticalStart + 100 / 2);
-    ctx.strokeText(precipitation, horizontalStart + 120, verticalStart + 100 / 2);
 
     ctx.font = '30px CustomFont';
     ctx.fillText(`Last updated: ${lastUpdated} GMT+3`, 20, canvas.height - 20);
@@ -142,12 +141,47 @@ async function renderImage() {
     ctx.fillText('Made by @lumijiez', canvas.width - 470, canvas.height - 20);
     ctx.strokeText(`Made by @lumijiez`, canvas.width - 470, canvas.height - 20);
 
-    const outputPath = path.join(__dirname, 'display', 'toshow.png');
+    console.log('Cleaning display folder...');
+    cleanDisplayFolder();
+
+    const newImageName = 'toshow' + now.getMilliseconds() + '.png';
+    const outputPath = path.join(__dirname, 'display', newImageName);
     const out = fs.createWriteStream(outputPath);
     const stream = canvas.createPNGStream();
     stream.pipe(out);
     out.on('finish', () => {
-        console.log('The image was created successfully!');
+        console.log('Image rendered and saved successfully.');
+    });
+
+    console.log('Updating README.md with new image link...');
+    let readmeContent = fs.readFileSync('README.md', 'utf-8');
+
+    const regex = /!\[Dashboard\]\((.*?)\)/;
+    readmeContent = readmeContent.replace(regex, `![Dashboard](https://github.com/lumijiez/lumijiez/scripts/display/${newImageName})`);
+
+    fs.writeFileSync('README.md', readmeContent, 'utf-8');
+    console.log('README.md updated successfully.');
+}
+
+function cleanDisplayFolder() {
+    const displayFolder = path.join(__dirname, 'display');
+
+    fs.readdir(displayFolder, (err, files) => {
+        if (err) {
+            console.error('Error reading directory:', err.message);
+            return;
+        }
+
+        files.forEach(file => {
+            const filePath = path.join(displayFolder, file);
+            fs.unlink(filePath, err => {
+                if (err) {
+                    console.error('Error deleting file:', err.message);
+                } else {
+                    console.log(`Deleted file: ${file}`);
+                }
+            });
+        });
     });
 }
 

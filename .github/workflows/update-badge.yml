@@ -28,15 +28,10 @@ jobs:
       - name: Fetch weather data and update image
         run: node scripts/update.js
 
-      - name: Clear display folder
-        run: |
-          rm -rf scripts/display/*
-          ls -la scripts/display/
-
       - name: Commit and push image update
         run: |
           git config --global user.name 'lumijiez'
           git config --global user.email 'danthevip@gmail.com'
-          git add --force scripts/display/toshow_*.png
+          git add --force .
           git commit -m "Updated weather image" || echo "No changes to commit"
           git push origin main --force

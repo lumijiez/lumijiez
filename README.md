@@ -1,13 +1,8 @@
-![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/toshow.png)
+![Dashboard](https://github.com/lumijiez/lumijiez/scripts/display/toshow718.png)
 
 # Daniel's Developer Hub 🌟
 
 Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of technologies and passionate about solving complex problems with innovative solutions.
-
-## 🕒 My Current Time and Weather
-
-
-
 
 ## 🚀 Expertise & Interests
 
