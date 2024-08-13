@@ -51,7 +51,9 @@ async function fetchCurrentTime() {
     console.log('Fetching current time...');
     try {
         const response = await axios.get(url);
-        const { datetime } = response.data;
+        const { datetime, timezone } = response.data;
+        console.log('Current time response:', response.data);
+        console.log(`Time zone from API: ${timezone}`);
         console.log('Current time retrieved successfully.');
         return new Date(datetime);
     } catch (error) {
