@@ -157,7 +157,7 @@ async function renderImage() {
     let readmeContent = fs.readFileSync('README.md', 'utf-8');
 
     const regex = /!\[Dashboard\]\((.*?)\)/;
-    readmeContent = readmeContent.replace(regex, `![Dashboard](https://github.com/lumijiez/lumijiez/scripts/display/${newImageName})`);
+    readmeContent = readmeContent.replace(regex, `![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/${newImageName})`);
 
     fs.writeFileSync('README.md', readmeContent, 'utf-8');
     console.log('README.md updated successfully.');
