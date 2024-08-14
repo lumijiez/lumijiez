@@ -179,10 +179,10 @@ async function renderImage() {
     const regex = /!\[Dashboard\]\((.*?)\)/;
     readmeContent = readmeContent.replace(regex, `![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/${newImageName})`);
 
-    const {public_nr, private_nr} = parseArgs();
+    const {public, private} = parseArgs();
 
-    const publicBadgeUrl = `https://img.shields.io/badge/Public%20Repositories-${public_nr}-blue`;
-    const privateBadgeUrl = `https://img.shields.io/badge/Private%20Repositories-${private_nr}-red`;
+    const publicBadgeUrl = `https://img.shields.io/badge/Public%20Repositories-${public}-blue`;
+    const privateBadgeUrl = `https://img.shields.io/badge/Private%20Repositories-${private}-red`;
 
     const regexPublicBadge = /!\[Public Repositories\]\((.*?)\)/;
     const regexPrivateBadge = /!\[Private Repositories\]\((.*?)\)/;
