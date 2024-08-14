@@ -29,6 +29,8 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
 **Tools:**  
 ![JetBrains](https://img.shields.io/badge/JetBrains-000000?style=flat&logo=jetbrains&logoColor=white)
 
+<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lumijiez" alt="stats" />
+
 ## 🌟 Highlights & Projects
 
 - **Minecraft Modding**: Mastering NeoForge and Blaze3D for advanced modding.
