@@ -1,7 +1,9 @@
 ![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/toshow821.png)
 
-![Public Repositories](https://img.shields.io/badge/Public%20Repositories-<PUBLIC_REPOS>-blue)
-![Private Repositories](https://img.shields.io/badge/Private%20Repositories-<PRIVATE_REPOS>-red)
+<p align="center">
+  <img src="https://img.shields.io/badge/Public%20Repositories-${public_nr}-007bff?style=for-the-badge&logo=github&logoColor=white" alt="Public Repositories" />
+  <img src="https://img.shields.io/badge/Private%20Repositories-${private_nr}-dc3545?style=for-the-badge&logo=github&logoColor=white" alt="Private Repositories" />
+</p>
 
 
 # Daniel's Developer Hub 🌟
