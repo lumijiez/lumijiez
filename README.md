@@ -95,4 +95,4 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
   <img src="https://profile-counter.glitch.me/{lumijiez}/count.svg" />
 </p>
 
-Thank you for exploring my profile! Let’s connect or collaborate on exciting projects. 🚀<br>Last updated at 2024-08-13 00:09 GMT+3
+Thank you for exploring my profile! Let’s connect or collaborate on exciting projects. 🚀
