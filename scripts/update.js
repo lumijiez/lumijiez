@@ -19,6 +19,17 @@ const icons = {
     moldovaFlag: path.join(__dirname, 'base', 'icons', 'moldova.png')
 };
 
+function parseArgs() {
+    const args = process.argv.slice(2);
+    const public = args[0] ? parseFloat(args[0]) : 0;
+    const private = args[1] ? parseFloat(args[1]) : 0;
+
+    console.log(`Public: ${public}, Private: ${private}`);
+    return { public, private };
+}
+
+parseArgs();
+
 async function fetchWeather() {
     const url = 'https://api.open-meteo.com/v1/forecast';
     const params = {

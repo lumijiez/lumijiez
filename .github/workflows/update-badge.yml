@@ -25,8 +25,27 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Collect GitHub data
+        id: collect_data 
+        run: |
+          curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/user/repos?per_page=100 > repos.json
+
+          PUBLIC_REPOS=$(jq '. | map(select(.private == false)) | length' repos.json)
+          PRIVATE_REPOS=$(jq '. | map(select(.private == true)) | length' repos.json)
+
+          echo "Public Repositories: $PUBLIC_REPOS"
+          echo "Private Repositories: $PRIVATE_REPOS"
+
+          echo "::set-output name=public_repos::$PUBLIC_REPOS"
+          echo "::set-output name=private_repos::$PRIVATE_REPOS"
+
       - name: Fetch weather data and update image
-        run: node scripts/update.js
+        run: node scripts/update.js ${PUBLIC_REPOS} ${PRIVATE_REPOS}
+        env:
+          PUBLIC_REPOS: ${{ steps.collect_data.outputs.public_repos }}
+          PRIVATE_REPOS: ${{ steps.collect_data.outputs.private_repos }}
 
       - name: Commit and push image update
         run: |
