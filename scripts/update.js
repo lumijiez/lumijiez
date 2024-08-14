@@ -181,8 +181,8 @@ async function renderImage() {
 
     const {public, private} = parseArgs();
 
-    const publicBadgeUrl = `https://img.shields.io/badge/Public%20Repositories-${public}-blue`;
-    const privateBadgeUrl = `https://img.shields.io/badge/Private%20Repositories-${private}-red`;
+    const publicBadgeUrl = `https://img.shields.io/badge/Public%20Repositories-${public_nr}-007bff?style=for-the-badge&logo=github&logoColor=white`;
+    const privateBadgeUrl = `https://img.shields.io/badge/Private%20Repositories-${private_nr}-dc3545?style=for-the-badge&logo=github&logoColor=white`;
 
     const regexPublicBadge = /!\[Public Repositories\]\((.*?)\)/;
     const regexPrivateBadge = /!\[Private Repositories\]\((.*?)\)/;
