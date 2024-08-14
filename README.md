@@ -29,7 +29,10 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
 **Tools:**  
 ![JetBrains](https://img.shields.io/badge/JetBrains-000000?style=flat&logo=jetbrains&logoColor=white)
 
-<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lumijiez" alt="stats" />
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lumijiez&layout=compact&theme=dark" alt="Top Languages">
+</p>
+
 
 ## 🌟 Highlights & Projects
 
