@@ -2,6 +2,7 @@ const { createCanvas, loadImage, registerFont } = require('canvas');
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
+const sharp = require('sharp');
 
 registerFont(path.join(__dirname, 'base', 'fonts', 'Nivea-Bold.otf'), { family: 'CustomFont' });
 
@@ -81,7 +82,7 @@ async function renderImage() {
     let hours = now.getHours();
 
     if (hours === 24) hours = '00';
-        else hours = hours.toString().padStart(2, '0');
+    else hours = hours.toString().padStart(2, '0');
     
     const minutes = now.getMinutes().toString().padStart(2, '0');
     const time = `${hours}:${minutes}`;
@@ -165,29 +166,44 @@ async function renderImage() {
     cleanDisplayFolder();
 
     const newImageName = 'toshow' + now.getMilliseconds() + '.png';
+    const tempImagePath = path.join(__dirname, 'display', 'temp-' + newImageName);
     const outputPath = path.join(__dirname, 'display', newImageName);
-    const out = fs.createWriteStream(outputPath);
+
+    // Save the uncompressed image first
+    const out = fs.createWriteStream(tempImagePath);
     const stream = canvas.createPNGStream();
     stream.pipe(out);
-    out.on('finish', () => {
+    out.on('finish', async () => {
         console.log('Image rendered and saved successfully.');
+
+        await sharp(tempImagePath)
+            .resize({ width: 2048 })
+            .toFormat('jpg', { compressionLevel: 9 }) 
+            .toFile(outputPath);
+
+        fs.unlink(tempImagePath, (err) => {
+            if (err) console.error('Error deleting temporary file:', err.message);
+            else console.log('Temporary file deleted.');
+        });
+
+        console.log('Compressed image saved successfully.');
+
+        console.log('Updating README.md with new image link...');
+        let readmeContent = fs.readFileSync('README.md', 'utf-8');
+
+        let regex = /!\[Dashboard\]\((.*?)\)/;
+        readmeContent = readmeContent.replace(regex, `![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/${newImageName})`);
+
+        const {public, private} = parseArgs();
+
+        const newBadges = `<p align="center"><img src="https://img.shields.io/badge/Public%20Repositories-${public}-007bff?style=for-the-badge&logo=github&logoColor=white" alt="Public Repositories" />  <img src="https://img.shields.io/badge/Private%20Repositories-${private}-dc3545?style=for-the-badge&logo=github&logoColor=white" alt="Private Repositories" /></p>`;
+
+        regex = /<p align="center">[\s\S]*?<\/p>/;
+        readmeContent = readmeContent.replace(regex, newBadges);
+
+        fs.writeFileSync('README.md', readmeContent, 'utf-8');
+        console.log('README.md updated successfully.');
     });
-
-    console.log('Updating README.md with new image link...');
-    let readmeContent = fs.readFileSync('README.md', 'utf-8');
-
-    let regex = /!\[Dashboard\]\((.*?)\)/;
-    readmeContent = readmeContent.replace(regex, `![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/${newImageName})`);
-
-    const {public, private} = parseArgs();
-
-    const newBadges = `<p align="center"><img src="https://img.shields.io/badge/Public%20Repositories-${public}-007bff?style=for-the-badge&logo=github&logoColor=white" alt="Public Repositories" />  <img src="https://img.shields.io/badge/Private%20Repositories-${private}-dc3545?style=for-the-badge&logo=github&logoColor=white" alt="Private Repositories" /></p>`;
-
-    regex = /<p align="center">[\s\S]*?<\/p>/;
-    readmeContent = readmeContent.replace(regex, newBadges);
-
-    fs.writeFileSync('README.md', readmeContent, 'utf-8');
-    console.log('README.md updated successfully.');
 }
 
 function cleanDisplayFolder() {

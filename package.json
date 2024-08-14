@@ -13,6 +13,7 @@
     "axios": "^1.7.3",
     "canvas": "^2.11.2",
     "date-fns": "^3.6.0",
-    "moment-timezone": "^0.5.45"
+    "moment-timezone": "^0.5.45",
+    "sharp": "^0.33.4"
   }
 }
