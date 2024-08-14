@@ -181,12 +181,7 @@ async function renderImage() {
 
     const {public, private} = parseArgs();
 
-    const newBadges = `
-    <p align="center">
-        <img src="https://img.shields.io/badge/Public%20Repositories-${public}-007bff?style=for-the-badge&logo=github&logoColor=white" alt="Public Repositories" />
-        <img src="https://img.shields.io/badge/Private%20Repositories-${private}-dc3545?style=for-the-badge&logo=github&logoColor=white" alt="Private Repositories" />
-    </p>
-    `;
+    const newBadges = `<p align="center"><img src="https://img.shields.io/badge/Public%20Repositories-${public}-007bff?style=for-the-badge&logo=github&logoColor=white" alt="Public Repositories" /><img src="https://img.shields.io/badge/Private%20Repositories-${private}-dc3545?style=for-the-badge&logo=github&logoColor=white" alt="Private Repositories" /></p>`;
 
     regex = /<p align="center">[\s\S]*?<\/p>/;
     readmeContent = readmeContent.replace(regex, newBadges);
