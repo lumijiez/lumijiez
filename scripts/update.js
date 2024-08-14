@@ -181,14 +181,15 @@ async function renderImage() {
 
     const {public, private} = parseArgs();
 
-    const publicBadgeUrl = `https://img.shields.io/badge/Public%20Repositories-${public}-007bff?style=for-the-badge&logo=github&logoColor=white`;
-    const privateBadgeUrl = `https://img.shields.io/badge/Private%20Repositories-${private}-dc3545?style=for-the-badge&logo=github&logoColor=white`;
+    const newBadges = `
+    <p align="center">
+        <img src="https://img.shields.io/badge/Public%20Repositories-${public}-007bff?style=for-the-badge&logo=github&logoColor=white" alt="Public Repositories" />
+        <img src="https://img.shields.io/badge/Private%20Repositories-${private}-dc3545?style=for-the-badge&logo=github&logoColor=white" alt="Private Repositories" />
+    </p>
+    `;
 
-    const regexPublicBadge = /!\[Public Repositories\]\((.*?)\)/;
-    const regexPrivateBadge = /!\[Private Repositories\]\((.*?)\)/;
-
-    readmeContent = readmeContent.replace(regexPublicBadge, `![Public Repositories](${publicBadgeUrl})`);
-    readmeContent = readmeContent.replace(regexPrivateBadge, `![Private Repositories](${privateBadgeUrl})`);
+    regex = /<p align="center">[\s\S]*?<\/p>/;
+    readmeContent = readmeContent.replace(regex, newBadges);
 
     fs.writeFileSync('README.md', readmeContent, 'utf-8');
     console.log('README.md updated successfully.');
