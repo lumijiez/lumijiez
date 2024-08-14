@@ -28,8 +28,6 @@ function parseArgs() {
     return { public, private };
 }
 
-parseArgs();
-
 async function fetchWeather() {
     const url = 'https://api.open-meteo.com/v1/forecast';
     const params = {
@@ -180,6 +178,17 @@ async function renderImage() {
 
     const regex = /!\[Dashboard\]\((.*?)\)/;
     readmeContent = readmeContent.replace(regex, `![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/${newImageName})`);
+
+    const {public_nr, private_nr} = parseArgs();
+
+    const publicBadgeUrl = `https://img.shields.io/badge/Public%20Repositories-${public_nr}-blue`;
+    const privateBadgeUrl = `https://img.shields.io/badge/Private%20Repositories-${private_nr}-red`;
+
+    const regexPublicBadge = /!\[Public Repositories\]\((.*?)\)/;
+    const regexPrivateBadge = /!\[Private Repositories\]\((.*?)\)/;
+
+    readmeContent = readmeContent.replace(regexPublicBadge, `![Public Repositories](${publicBadgeUrl})`);
+    readmeContent = readmeContent.replace(regexPrivateBadge, `![Private Repositories](${privateBadgeUrl})`);
 
     fs.writeFileSync('README.md', readmeContent, 'utf-8');
     console.log('README.md updated successfully.');

@@ -1,5 +1,9 @@
 ![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/toshow821.png)
 
+![Public Repositories](https://img.shields.io/badge/Public%20Repositories-<PUBLIC_REPOS>-blue)
+![Private Repositories](https://img.shields.io/badge/Private%20Repositories-<PRIVATE_REPOS>-red)
+
+
 # Daniel's Developer Hub 🌟
 
 Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of technologies and passionate about solving complex problems with innovative solutions.
