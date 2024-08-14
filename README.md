@@ -90,7 +90,7 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
 
 - **NeoForge Contributor**: Active supporter and helper in the NeoForge Minecraft modding community.
 
-<h2 align="center">👀 Visitor Counth</h2>
+<h2 align="center">👀 Visitor Count</h2>
 <p align="center">
   <img src="https://profile-counter.glitch.me/{lumijiez}/count.svg" />
 </p>
