@@ -176,7 +176,7 @@ async function renderImage() {
     console.log('Updating README.md with new image link...');
     let readmeContent = fs.readFileSync('README.md', 'utf-8');
 
-    const regex = /!\[Dashboard\]\((.*?)\)/;
+    let regex = /!\[Dashboard\]\((.*?)\)/;
     readmeContent = readmeContent.replace(regex, `![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/${newImageName})`);
 
     const {public, private} = parseArgs();
