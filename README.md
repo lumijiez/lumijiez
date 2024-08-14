@@ -3,7 +3,7 @@
 <p align="center"><img src="https://img.shields.io/badge/Public%20Repositories-24-007bff?style=for-the-badge&logo=github&logoColor=white" alt="Public Repositories" />  <img src="https://img.shields.io/badge/Private%20Repositories-9-dc3545?style=for-the-badge&logo=github&logoColor=white" alt="Private Repositories" /></p>
 
 <p align="center">
-# Daniel's Developer Hub 🌟
+  <h1>Daniel's Developer Hub 🌟</h1>
 </p>
 
 Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of technologies and passionate about solving complex problems with innovative solutions.
