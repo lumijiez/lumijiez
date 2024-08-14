@@ -1,4 +1,4 @@
-![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/toshow213.png)
+![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/toshow599.png)
 
 <p align="center"><img src="https://img.shields.io/badge/Public%20Repositories-24-007bff?style=for-the-badge&logo=github&logoColor=white" alt="Public Repositories" />  <img src="https://img.shields.io/badge/Private%20Repositories-9-dc3545?style=for-the-badge&logo=github&logoColor=white" alt="Private Repositories" /></p>
 
