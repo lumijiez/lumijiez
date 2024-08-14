@@ -38,14 +38,14 @@ jobs:
           echo "Public Repositories: $PUBLIC_REPOS"
           echo "Private Repositories: $PRIVATE_REPOS"
 
-          echo "::set-output name=public_repos::$PUBLIC_REPOS"
-          echo "::set-output name=private_repos::$PRIVATE_REPOS"
+          echo "public_repos=$PUBLIC_REPOS" >> $GITHUB_ENV
+          echo "private_repos=$PRIVATE_REPOS" >> $GITHUB_ENV
 
       - name: Fetch weather data and update image
-        run: node scripts/update.js ${PUBLIC_REPOS} ${PRIVATE_REPOS}
+        run: node scripts/update.js ${{ env.PUBLIC_REPOS }} ${{ env.PRIVATE_REPOS }}
         env:
-          PUBLIC_REPOS: ${{ steps.collect_data.outputs.public_repos }}
-          PRIVATE_REPOS: ${{ steps.collect_data.outputs.private_repos }}
+          PUBLIC_REPOS: ${{ env.PUBLIC_REPOS }}
+          PRIVATE_REPOS: ${{ env.PRIVATE_REPOS }}
 
       - name: Commit and push image update
         run: |
