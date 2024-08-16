@@ -1,6 +1,10 @@
-![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/toshow193.png)
+![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/toshow504.png)
 
 <p align="center"><img src="https://img.shields.io/badge/Public%20Repositories-0-007bff?style=for-the-badge&logo=github&logoColor=white" alt="Public Repositories" />  <img src="https://img.shields.io/badge/Private%20Repositories-0-dc3545?style=for-the-badge&logo=github&logoColor=white" alt="Private Repositories" /></p>
+
+<p id="stars" align="center">
+  <img src="https://github.com/lumijiez/lumijiez/blob/main/scripts/display/githubStar1723840784708.png" alt="Stars" />
+</p>
 
 <h1 align="center">Daniel's Developer Hub 🌟</h1>
 

@@ -20,6 +20,8 @@ const icons = {
     moldovaFlag: path.join(__dirname, 'base', 'icons', 'moldova.png')
 };
 
+const githubStarImage = path.join(__dirname, 'base', 'star', 'githubStar.png');
+
 function parseArgs() {
     const args = process.argv.slice(2);
     const public = args[0] ? parseFloat(args[0]) : 0;
@@ -27,6 +29,23 @@ function parseArgs() {
 
     console.log(`Public: ${public}, Private: ${private}`);
     return { public, private };
+}
+
+async function fetchGitHubStars(username) {
+    const url = `https://api.github.com/users/${username}/repos?per_page=100`;
+
+    console.log(`Fetching GitHub stars for user: ${username}`);
+    try {
+        const response = await axios.get(url);
+        const repos = response.data;
+
+        const totalStars = repos.reduce((acc, repo) => acc + repo.stargazers_count, 0);
+        console.log(`Total stars: ${totalStars}`);
+        return totalStars;
+    } catch (error) {
+        console.error('Error fetching GitHub stars:', error.message);
+        return 0;
+    }
 }
 
 async function fetchWeather() {
@@ -204,7 +223,61 @@ async function renderImage() {
         fs.writeFileSync('README.md', readmeContent, 'utf-8');
         console.log('README.md updated successfully.');
     });
+
+    await renderGitHubStarsImage(); 
 }
+
+async function renderGitHubStarsImage() {
+    console.log('Rendering GitHub stars image...');
+    const username = 'lumijiez';
+    const totalStars = await fetchGitHubStars(username);
+
+    const canvas = createCanvas(1024, 1024);
+    const ctx = canvas.getContext('2d');
+
+    const starImage = await loadImage(githubStarImage);
+    ctx.drawImage(starImage, 0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = '#ff8c00'; 
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = 5;
+    ctx.font = '800px CustomFont';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    ctx.fillText(`${totalStars}`, canvas.width / 2, canvas.height / 2 + 80);
+    ctx.strokeText(`${totalStars}`, canvas.width / 2, canvas.height / 2 + 80);
+
+    const newStarImageName = 'githubStar' + new Date().getTime() + '.png';
+    const starImagePath = path.join(__dirname, 'display', newStarImageName);
+
+    const out = fs.createWriteStream(starImagePath);
+    const stream = canvas.createPNGStream();
+    stream.pipe(out);
+
+    out.on('finish', async () => {
+        console.log('GitHub stars image rendered and saved successfully.');
+
+        sharp(starImagePath)
+            .resize({ width: 1024 })
+            .toFormat('png', { compressionLevel: 9 });
+
+        console.log('Compressed GitHub stars image saved successfully.');
+
+        console.log('Updating README.md with new GitHub stars image link...');
+        let readmeContent = fs.readFileSync('README.md', 'utf-8');
+
+        let regex = /<p id="stars" align="center">[\s\S]*?<\/p>/;
+        const newStarsSection = `<p id="stars" align="center">
+  <img src="https://github.com/lumijiez/lumijiez/blob/main/scripts/display/${newStarImageName}" alt="Stars" />
+</p>`;
+        readmeContent = readmeContent.replace(regex, newStarsSection);
+
+        fs.writeFileSync('README.md', readmeContent, 'utf-8');
+        console.log('README.md updated with GitHub stars image successfully.');
+    });
+}
+
 
 function cleanDisplayFolder() {
     const displayFolder = path.join(__dirname, 'display');
