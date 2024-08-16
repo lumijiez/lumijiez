@@ -245,8 +245,8 @@ async function renderGitHubStarsImage() {
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
 
-    ctx.fillText(`${totalStars}`, canvas.width / 2, canvas.height / 2 + 80);
-    ctx.strokeText(`${totalStars}`, canvas.width / 2, canvas.height / 2 + 80);
+    ctx.fillText(`${totalStars}`, canvas.width / 2, canvas.height / 2 + 100);
+    ctx.strokeText(`${totalStars}`, canvas.width / 2, canvas.height / 2 + 100);
 
     const newStarImageName = 'githubStar' + new Date().getTime() + '.png';
     const starImagePath = path.join(__dirname, 'display', newStarImageName);
