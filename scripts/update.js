@@ -269,7 +269,7 @@ async function renderGitHubStarsImage() {
 
         let regex = /<p id="stars" align="center">[\s\S]*?<\/p>/;
         const newStarsSection = `<p id="stars" align="center">
-  <img src="https://github.com/lumijiez/lumijiez/blob/main/scripts/display/${newStarImageName}" alt="Stars" />
+  <img height="200" width="200" src="https://github.com/lumijiez/lumijiez/blob/main/scripts/display/${newStarImageName}" alt="Stars" />
 </p>`;
         readmeContent = readmeContent.replace(regex, newStarsSection);
 
