@@ -1,9 +1,9 @@
-![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/toshow548.png)
+![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/toshow992.png)
 
 <p align="center"><img src="https://img.shields.io/badge/Public%20Repositories-24-007bff?style=for-the-badge&logo=github&logoColor=white" alt="Public Repositories" />  <img src="https://img.shields.io/badge/Private%20Repositories-9-dc3545?style=for-the-badge&logo=github&logoColor=white" alt="Private Repositories" /></p>
 
 <p id="stars" align="center">
-  <img height="200" width="200" src="https://github.com/lumijiez/lumijiez/blob/main/scripts/display/githubStar1723918012788.png" alt="Stars" />
+  <img height="200" width="200" src="https://github.com/lumijiez/lumijiez/blob/main/scripts/display/githubStar1723918819320.png" alt="Stars" />
 </p>
 
 <h1 align="center">Daniel's Developer Hub 🌟</h1>
