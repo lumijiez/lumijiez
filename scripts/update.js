@@ -232,7 +232,7 @@ async function renderGitHubStarsImage() {
     const username = 'lumijiez';
     const totalStars = await fetchGitHubStars(username);
 
-    const canvas = createCanvas(1024, 1024);
+    const canvas = createCanvas(1536, 1024);
     const ctx = canvas.getContext('2d');
 
     const starImage = await loadImage(githubStarImage);
@@ -259,7 +259,6 @@ async function renderGitHubStarsImage() {
         console.log('GitHub stars image rendered and saved successfully.');
 
         sharp(starImagePath)
-            .resize({ width: 1024 })
             .toFormat('png', { compressionLevel: 9 });
 
         console.log('Compressed GitHub stars image saved successfully.');
