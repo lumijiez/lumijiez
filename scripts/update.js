@@ -100,8 +100,8 @@ async function renderImage() {
     ctx.strokeText(`${public}`, offset + 50, 1030);
 
     ctx.fillStyle = 'white';
-    ctx.fillText(`/`, offset + 235, 1030); 
-    ctx.strokeText(`/`, offset + 235, 1030);
+    ctx.fillText(`/`, offset + 230, 1030); 
+    ctx.strokeText(`/`, offset + 230, 1030);
 
     ctx.fillStyle = 'red';
     ctx.fillText(`${private}`, offset + 350, 1030); 
