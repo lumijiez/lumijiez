@@ -52,6 +52,7 @@ async function renderImage() {
     const lastUpdated = now.toLocaleString();
 
     const { temperature, windSpeed } = await fetchWeather();
+    const { public, private } = parseArgs();
 
     let baseImagePath;
 
@@ -89,6 +90,24 @@ async function renderImage() {
     ctx.font = '120px NiveaFont';
     ctx.fillText(`${dayOfWeek}`, 50, 710); 
     ctx.strokeText(`${dayOfWeek}`, 50, 710);
+
+    ctx.font = '100px NiveaFont';
+    ctx.fillText(`Repositories:`, 50, 910); 
+
+    let offset = 115;
+    ctx.fillStyle = 'limegreen';
+    ctx.fillText(`${public}`, offset + 50, 1030); 
+    ctx.strokeText(`${public}`, offset + 50, 1030);
+
+    ctx.fillStyle = 'white';
+    ctx.fillText(`/`, offset + 200, 1030); 
+    ctx.strokeText(`/`, offset + 200, 1030);
+
+    ctx.fillStyle = 'red';
+    ctx.fillText(`${private}`, offset + 350, 1030); 
+    ctx.strokeText(`${private}`, offset + 350, 1030);
+
+    ctx.fillStyle = 'white';
 
     ctx.font = '80px NiveaFont';
     let verticalStart = 90;
@@ -170,8 +189,6 @@ async function renderImage() {
 
         let regex = /!\[Dashboard\]\((.*?)\)/;
         readmeContent = readmeContent.replace(regex, `![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/${newImageName})`);
-
-        const {public, private} = parseArgs();
 
         fs.writeFileSync('README.md', readmeContent, 'utf-8');
         console.log('README.md updated successfully.');
