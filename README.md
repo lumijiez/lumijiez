@@ -1,11 +1,5 @@
 ![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/toshow639.png)
 
-<p align="center"><img src="https://img.shields.io/badge/Public%20Repositories-0-007bff?style=for-the-badge&logo=github&logoColor=white" alt="Public Repositories" />  <img src="https://img.shields.io/badge/Private%20Repositories-0-dc3545?style=for-the-badge&logo=github&logoColor=white" alt="Private Repositories" /></p>
-
-<p id="stars" align="center">
-  <img height="200" width="300" src="https://github.com/lumijiez/lumijiez/blob/main/scripts/display/githubStar1724617812699.png" alt="Stars" />
-</p>
-
 <h1 align="center">Daniel's Developer Hub 🌟</h1>
 
 Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of technologies and passionate about solving complex problems with innovative solutions.
