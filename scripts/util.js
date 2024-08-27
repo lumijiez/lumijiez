@@ -3,6 +3,7 @@ const path = require('path');
 const axios = require('axios');
 
 function cleanDisplayFolder() {
+    console.log('Cleaning display folder...');
     const displayFolder = path.join(__dirname, 'display');
 
     fs.readdir(displayFolder, (err, files) => {
@@ -13,22 +14,26 @@ function cleanDisplayFolder() {
 
         files.forEach(file => {
             const filePath = path.join(displayFolder, file);
-            fs.unlink(filePath, err => {
-                if (err) {
-                    console.error('Error deleting file:', err.message);
-                }
-            });
+            fs.unlink(filePath, err => err && console.error('Error deleting file:', err.message));
         });
     });
+    console.log('Display folder clean...');
+}
+
+function parseArgs() {
+    const args = process.argv.slice(2);
+    const public = args[0] ? parseFloat(args[0]) : 0;
+    const private = args[1] ? parseFloat(args[1]) : 0;
+
+    console.log(`Public: ${public}, Private: ${private}`);
+    return { public, private };
 }
 
 async function fetchGitHubStars(username) {
     const url = `https://api.github.com/users/${username}/repos?per_page=100`;
 
     try {
-        const response = await axios.get(url);
-        const repos = response.data;
-
+        const repos = (await axios.get(url)).data;
         const totalStars = repos.reduce((acc, repo) => acc + repo.stargazers_count, 0);
         return totalStars;
     } catch (error) {
@@ -39,24 +44,19 @@ async function fetchGitHubStars(username) {
 
 async function fetchWeather() {
     const url = 'https://api.open-meteo.com/v1/forecast';
-    const params = {
-        latitude: 47.0105,
-        longitude: 28.8638,
-        current_weather: true 
-    };
+    const params = { latitude: 47.0105, longitude: 28.8638, current_weather: true };
 
     try {
-        const response = await axios.get(url, { params });
-        const { temperature, windspeed } = response.data.current_weather;
+        const { temperature, windspeed } = (await axios.get(url, { params })).data.current_weather;
         return {
             temperature: temperature + '°C',
-            windSpeed: windspeed + ' km/h',
+            windSpeed: windspeed + ' kmh',
         };
     } catch (error) {
         console.error('Error fetching weather data:', error.message);
         return {
-            temperature: 'unknown',
-            windSpeed: 'unknown',
+            temperature: '0',
+            windSpeed: '0',
         };
     }
 }
@@ -66,17 +66,37 @@ async function fetchCurrentTime() {
 
     try {
         const response = await axios.get(url);
-        const { datetime, timezone } = response.data;
-        return new Date(datetime);
+        const now = new Date(new Date(response.data.datetime).getTime() + 3 * 60 * 60 * 1000);
+
+        const hour = now.getHours();
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const renderableHours = hour === 24 ? '00' : hour.toString().padStart(2, '0');
+        const time = `${renderableHours}:${minutes}`;
+        const amPmTime = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+        const dayOfWeek = now.toLocaleDateString('en-US', { weekday: 'long' });
+        const lastUpdated = now.toLocaleString();
+
+        return {
+            now,
+            hour,
+            minutes,
+            renderableHours,
+            time,
+            amPmTime,
+            dayOfWeek,
+            lastUpdated
+        };
     } catch (error) {
         console.error('Error fetching current time:', error.message);
         return new Date(); 
     }
 }
 
+
 module.exports = {
     cleanDisplayFolder,
     fetchGitHubStars,
     fetchWeather,
-    fetchCurrentTime
+    fetchCurrentTime,
+    parseArgs
 };
