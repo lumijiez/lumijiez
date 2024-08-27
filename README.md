@@ -1,4 +1,4 @@
-![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/toshow506.png)
+![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/toshow243.png)
 
 <h1 align="center">Daniel's Developer Hub 🌟</h1>
 
@@ -81,8 +81,8 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
 
 ## 🧩 Development Philosophy
 
-- **Balanced Approach**: Effective both independently and in team environments, with strong leadership skills.
-- **Intermittent Work**: Embraces breaks to foster creativity and problem-solving.
+- **Balanced Approach**: I am effective both independently and in team environments, with strong leadership skills.
+- **Intermittent Work**: I embrace micro-breaks to foster creativity and problem-solving.
 
 ## 🌐 Community Involvement
 
