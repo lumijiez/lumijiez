@@ -139,7 +139,7 @@ async function renderImage() {
         console.log('Image rendered and saved successfully.');
 
         await sharp(tempImagePath)
-            .toFormat('png', { compressionLevel: 9 }) 
+            .toFormat('jpg', { compressionLevel: 9 }) 
             .toFile(outputPath);
 
         fs.unlink(tempImagePath, (err) => {
