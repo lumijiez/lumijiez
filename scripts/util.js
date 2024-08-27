@@ -2,22 +2,17 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 
-function cleanDisplayFolder() {
+async function cleanDisplayFolder() {
     console.log('Cleaning display folder...');
     const displayFolder = path.join(__dirname, 'display');
 
-    fs.readdir(displayFolder, (err, files) => {
-        if (err) {
-            console.error('Error reading directory:', err.message);
-            return;
-        }
-
-        files.forEach(file => {
-            const filePath = path.join(displayFolder, file);
-            fs.unlink(filePath, err => err && console.error('Error deleting file:', err.message));
-        });
-    });
-    console.log('Display folder clean...');
+    try {
+        const files = await fs.promises.readdir(displayFolder);
+        await Promise.all(files.map(file => fs.promises.unlink(path.join(displayFolder, file))));
+        console.log('Display folder clean...');
+    } catch (err) {
+        console.error('Error cleaning display folder:', err.message);
+    }
 }
 
 function parseArgs() {
