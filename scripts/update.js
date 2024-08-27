@@ -93,6 +93,7 @@ async function renderImage() {
 
     ctx.font = '100px NiveaFont';
     ctx.fillText(`Repositories:`, 50, 910); 
+    ctx.strokeText(`Repositories:`, 50, 910);
 
     let offset = 115;
     ctx.fillStyle = 'limegreen';
