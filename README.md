@@ -6,7 +6,7 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
 
 ## 🚀 Expertise & Interests
 
-- **Game Development**: Dive into Minecraft modding and Unity.
+- **Game Development**: Diving into Unity and Minecraft modding.
 - **Web & Desktop Applications**: Create robust applications with modern frameworks.
 - **Graphics & Simulations**: Explore advanced graphics and realistic simulations.
 
@@ -84,9 +84,6 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
 - **Balanced Approach**: I am effective both independently and in team environments, with strong leadership skills.
 - **Intermittent Work**: I embrace micro-breaks to foster creativity and problem-solving.
 
-## 🌐 Community Involvement
-
-- **NeoForge Contributor**: Active supporter and helper in the NeoForge Minecraft modding community.
 
 <h2 align="center">👀 Visitor Count</h2>
 <p align="center">
