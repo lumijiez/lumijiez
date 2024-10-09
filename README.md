@@ -25,7 +25,6 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
 <p align="center">
   <strong>Frameworks & Libraries:</strong><br>
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" alt="React">
-  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=vue.js&logoColor=white" alt="Vue.js">
   <img src="https://img.shields.io/badge/Svelte-FF3E00?style=flat&logo=svelte&logoColor=white" alt="Svelte">
   <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=spring&logoColor=white" alt="Spring">
   <img src="https://img.shields.io/badge/ASP.NET-5C2D91?style=flat&logo=aspnet&logoColor=white" alt="ASP.NET">
