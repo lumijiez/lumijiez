@@ -23,6 +23,7 @@
       "events_url": "https://api.github.com/users/Flexksx/events{/privacy}",
       "received_events_url": "https://api.github.com/users/Flexksx/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/Flexksx/FAF-Hackathon-Winter-2023",
@@ -132,6 +133,7 @@
       "events_url": "https://api.github.com/users/Flexksx/events{/privacy}",
       "received_events_url": "https://api.github.com/users/Flexksx/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/Flexksx/Listy",
@@ -241,6 +243,7 @@
       "events_url": "https://api.github.com/users/Flexksx/events{/privacy}",
       "received_events_url": "https://api.github.com/users/Flexksx/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/Flexksx/sirius-deeptech-invoice",
@@ -350,6 +353,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/blockheads",
@@ -465,6 +469,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/brutehangman",
@@ -580,6 +585,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/bugger",
@@ -689,6 +695,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/cacheduper",
@@ -804,6 +811,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/codeforces",
@@ -919,6 +927,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/crmp-server",
@@ -1034,6 +1043,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/cryptography-labs",
@@ -1149,6 +1159,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/discretemath-labs",
@@ -1264,6 +1275,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/expensetracker",
@@ -1379,6 +1391,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/gigahack",
@@ -1488,6 +1501,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/groovegarden",
@@ -1603,6 +1617,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/leapy",
@@ -1718,6 +1733,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/lfa-labs",
@@ -1833,6 +1849,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/lumijiez",
@@ -1876,8 +1893,8 @@
     "releases_url": "https://api.github.com/repos/lumijiez/lumijiez/releases{/id}",
     "deployments_url": "https://api.github.com/repos/lumijiez/lumijiez/deployments",
     "created_at": "2022-11-09T16:43:37Z",
-    "updated_at": "2024-10-17T23:06:58Z",
-    "pushed_at": "2024-10-17T23:06:54Z",
+    "updated_at": "2024-10-17T23:20:07Z",
+    "pushed_at": "2024-10-17T23:20:04Z",
     "git_url": "git://github.com/lumijiez/lumijiez.git",
     "ssh_url": "git@github.com:lumijiez/lumijiez.git",
     "clone_url": "https://github.com/lumijiez/lumijiez.git",
@@ -1949,6 +1966,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/luminarium",
@@ -2064,6 +2082,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/luminarium-old",
@@ -2179,6 +2198,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/luminous",
@@ -2294,6 +2314,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/lumiscope",
@@ -2409,6 +2430,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/mastermind",
@@ -2524,6 +2546,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/monitormanager",
@@ -2639,6 +2662,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/monoalpha",
@@ -2748,6 +2772,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/multiprecision",
@@ -2863,6 +2888,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/networking-labs",
@@ -2978,6 +3004,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/oop-labs",
@@ -3093,6 +3120,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/perlinsim",
@@ -3208,6 +3236,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/quanta",
@@ -3323,6 +3352,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/raven",
@@ -3438,6 +3468,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/react-card",
@@ -3547,6 +3578,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/scaffoldgl",
@@ -3662,6 +3694,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/squarely",
@@ -3777,6 +3810,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/storyboard",
@@ -3892,6 +3926,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/studentmanager",
@@ -4007,6 +4042,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/syncapp",
@@ -4122,6 +4158,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/tagless",
@@ -4237,6 +4274,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/taskmanager",
@@ -4352,6 +4390,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/tgbot",
@@ -4467,6 +4506,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/threadly",
@@ -4582,6 +4622,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/tmps-labs",
@@ -4697,6 +4738,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/winx",
@@ -4812,6 +4854,7 @@
       "events_url": "https://api.github.com/users/lumijiez/events{/privacy}",
       "received_events_url": "https://api.github.com/users/lumijiez/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/lumijiez/wirelesspacman",
