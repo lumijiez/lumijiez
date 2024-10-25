@@ -94,7 +94,7 @@ async function renderImage() {
     ctx.strokeText(windSpeed, windTextStart, verticalStart + iconSize / 2 + 30);
     verticalStart += 190;
 
-    let offset = 1600;
+    let offset = 1670;
 
     ctx.font = '60px NiveaFont';
     ctx.fillText(`Repos:`, offset + 50, verticalStart + 100); 
