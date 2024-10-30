@@ -56,35 +56,30 @@ async function fetchWeather() {
     }
 }
 
-async function fetchCurrentTime() {
-    const url = 'http://worldtimeapi.org/api/timezone/Europe/Chisinau';
+function fetchCurrentTime() {
+    const now = new Date();
 
-    try {
-        const response = await axios.get(url);
-        const now = new Date(new Date(response.data.datetime).getTime() + 3 * 60 * 60 * 1000);
+    const hour = now.getHours();
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const renderableHours = hour === 24 ? '00' : hour.toString().padStart(2, '0');
+    const time = `${renderableHours}:${minutes}`;
 
-        const hour = now.getHours();
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        const renderableHours = hour === 24 ? '00' : hour.toString().padStart(2, '0');
-        const time = `${renderableHours}:${minutes}`;
-        const amPmTime = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
-        const dayOfWeek = now.toLocaleDateString('en-US', { weekday: 'long' });
-        const lastUpdated = now.toLocaleString();
+    const amPmTime = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
 
-        return {
-            now,
-            hour,
-            minutes,
-            renderableHours,
-            time,
-            amPmTime,
-            dayOfWeek,
-            lastUpdated
-        };
-    } catch (error) {
-        console.error('Error fetching current time:', error.message);
-        return new Date(); 
-    }
+    const dayOfWeek = now.toLocaleDateString('en-US', { weekday: 'long' });
+
+    const lastUpdated = now.toLocaleString();
+
+    return {
+        now,
+        hour,
+        minutes,
+        renderableHours,
+        time,
+        amPmTime,
+        dayOfWeek,
+        lastUpdated
+    };
 }
 
 
