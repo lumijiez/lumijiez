@@ -58,6 +58,7 @@ async function fetchWeather() {
 
 function fetchCurrentTime() {
     const now = new Date();
+    now.setHours(now.getHours() + 2);
 
     const hour = now.getHours();
     const minutes = now.getMinutes().toString().padStart(2, '0');
