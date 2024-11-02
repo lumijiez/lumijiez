@@ -4,7 +4,6 @@
 
 Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of technologies and passionate about solving complex problems with innovative solutions.
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=lumijiez&theme=onedark&title=Commits,Stars,Repositories,MultiLanguage)](https://github.com/ryo-ma/github-profile-trophy)
 
 ## 🚀 Expertise & Interests
 
