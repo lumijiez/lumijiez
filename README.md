@@ -1,4 +1,4 @@
-![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/toshow895.png)
+![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/toshow178.png)
 
 <h1 align="center">Daniel's Developer Hub 🌟</h1>
 
