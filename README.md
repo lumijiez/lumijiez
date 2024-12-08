@@ -2,14 +2,13 @@
 
 <h1 align="center">Welcome to my Developer Hub</h1>
 
-Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of technologies and passionate about solving complex problems with innovative solutions.
-
+I'm a dynamic developer specializing in a range of technologies and passionate about exploring new challenges!
 
 ## 🚀 Interests (& Expertise)
 
 - **Game Development**: Diving into Unity and Minecraft modding.
-- **Web & Desktop Applications**: Create robust applications with modern frameworks.
-- **Graphics & Simulations**: Explore advanced graphics and realistic simulations.
+- **Web & Desktop Applications**: Creating robust applications with modern frameworks.
+- **Graphics & Simulations**: Exploring advanced graphics and realistic simulations.
 
 <h2 align="center">🛠️ Technologies I've Worked With</h2>
 
@@ -66,12 +65,9 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
   <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" alt="Node.js">
 </p>
 
-
-
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lumijiez&layout=compact&theme=dark" alt="Top Languages">
 </p>
-
 
 ## Highlights & Projects
 
@@ -81,11 +77,9 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
 
 [![Lumijiez's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=lumijiez&custom_title=Contributions&theme=react-dark&color=708090&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
-
 <h2 align="center">👀 Visitor Count</h2>
 <p align="center">
   <img src="https://profile-counter.glitch.me/{lumijiez}/count.svg" />
 </p>
 
 <p align="center">Thank you for exploring my profile! Let’s connect or collaborate on exciting projects. 🚀</p>
-
