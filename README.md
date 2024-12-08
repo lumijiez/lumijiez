@@ -84,6 +84,9 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
 - **Balanced Approach**: I am effective both independently and in team environments, with strong leadership skills.
 - **Intermittent Work**: I embrace micro-breaks to foster creativity and problem-solving.
 
+![](./profile-3d-contrib/profile-green-animate.svg)
+
+
 [![Lumijiez's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=lumijiez&custom_title=Contributions&theme=react-dark&color=708090&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 
