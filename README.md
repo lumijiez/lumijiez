@@ -1,11 +1,11 @@
 ![Dashboard](https://github.com/lumijiez/lumijiez/blob/main/scripts/display/toshow531.png)
 
-<h1 align="center">Daniel's Developer Hub 🌟</h1>
+<h1 align="center">Welcome to my Developer Hub</h1>
 
 Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of technologies and passionate about solving complex problems with innovative solutions.
 
 
-## 🚀 Expertise & Interests
+## 🚀 Interests (& Expertise)
 
 - **Game Development**: Diving into Unity and Minecraft modding.
 - **Web & Desktop Applications**: Create robust applications with modern frameworks.
@@ -73,19 +73,11 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
 </p>
 
 
-## 🌟 Highlights & Projects
+## Highlights & Projects
 
 - **Minecraft Modding**: Mastering NeoForge and Blaze3D for advanced modding.
 - **Unity Development**: Crafting immersive experiences with Unity.
 - **Web & Desktop Apps**: Leveraging modern frameworks like MERN, Spring + Svelte, and ASP.NET + Vue/React for sophisticated applications.
-
-## 🧩 Development Philosophy
-
-- **Balanced Approach**: I am effective both independently and in team environments, with strong leadership skills.
-- **Intermittent Work**: I embrace micro-breaks to foster creativity and problem-solving.
-
-![](./profile-3d-contrib/profile-green-animate.svg)
-
 
 [![Lumijiez's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=lumijiez&custom_title=Contributions&theme=react-dark&color=708090&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
@@ -95,4 +87,5 @@ Welcome to my GitHub profile! I'm a dynamic developer specializing in a range of
   <img src="https://profile-counter.glitch.me/{lumijiez}/count.svg" />
 </p>
 
-Thank you for exploring my profile! Let’s connect or collaborate on exciting projects. 🚀
+<p align="center">Thank you for exploring my profile! Let’s connect or collaborate on exciting projects. 🚀</p>
+
