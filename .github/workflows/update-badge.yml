@@ -1,7 +1,7 @@
-name: Update Weather Badge
+nname: Update Weather Badge
 
-on:
-  schedule:
+non:
+  nschedule:
     - cron: '*/10 * * * *'  # Run every 10 minutes
   push:
     branches:
