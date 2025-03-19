@@ -124,8 +124,8 @@ async function renderImage() {
     ctx.strokeText(`Chisinau`, canvas.width - flagSize - 510, canvas.height - 130);
 
     ctx.font = '60px NiveaFont';
-    ctx.fillText('Made by @berrylemons', canvas.width - 700, canvas.height - 50);
-    ctx.strokeText(`Made by @berrylemons`, canvas.width - 700, canvas.height - 50);
+    ctx.fillText('Made by @berrylemons', canvas.width - 780, canvas.height - 50);
+    ctx.strokeText(`Made by @berrylemons`, canvas.width - 780, canvas.height - 50);
 
     cleanDisplayFolder();
 
