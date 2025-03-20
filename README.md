@@ -1,4 +1,4 @@
-![Dashboard](https://github.com/berrylemons/berrylemons/blob/main/scripts/display/toshow264.png)
+![Dashboard](https://github.com/berrylemons/berrylemons/blob/main/scripts/display/toshow776.png)
 
 <h1 align="center">Welcome to my Developer Hub</h1>
 
