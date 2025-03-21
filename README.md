@@ -66,7 +66,7 @@ I'm a dynamic developer specializing in a range of technologies and passionate a
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lumijiez&layout=compact&theme=dark" alt="Top Languages">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=berrylemons&layout=compact&theme=dark" alt="Top Languages">
 </p>
 
 ## Highlights & Projects
