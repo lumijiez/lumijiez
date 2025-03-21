@@ -12,7 +12,7 @@ I'm a dynamic developer specializing in a range of technologies and passionate a
 
 <h2 align="center">🛠️ Technologies I've Worked With</h2>
 
-<p align="center">
+<p>
   <strong>Languages:</strong>
   <img src="https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white" alt="Java">
   <img src="https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white" alt="C#">
